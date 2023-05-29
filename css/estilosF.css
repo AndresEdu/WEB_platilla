@@ -1,0 +1,277 @@
+@import "compass/css3";
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+:root {
+    --backgorundcolor:black;
+    --blanco: white;
+    --negro: black;
+    --rojo: #CE0000;
+    --rosa: #C5004E;
+    --morado:#9B277A;
+    --azul:#324b77;
+    --mar:#2F4858;
+    --amarillo: rgb(210, 228, 4);
+    --naranja: orange;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;	
+	background: #000;
+	
+}
+
+/* * ============================== */
+/* * ============ HEADER ========== */
+/* * ============================== */
+
+.navbar {
+	background: #000;
+}
+
+.navbar a {
+	color: var(--morado);
+	display: inline-block;
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	transition: .3s ease-out all;
+}
+
+.navbar a:hover {
+	background: var(--morado);
+	color: #000;
+	text-decoration: none;
+}
+
+.contenedor {
+	z-index: 1;
+	max-width: 1000px;
+	margin: auto;
+	margin-top: 10px;
+	display:flex;
+	justify-content: space-between;
+}
+
+.contenedor b {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	font-size: 24px;
+	color: #fff;
+	align-items: center;
+	top: 10px;
+}
+
+.contenedor p {
+	text-align: justify; 
+}
+
+.contenedor li{
+	color: var(--rojo);
+}
+
+.logo{
+	width: 95%;
+	height: 95%;
+	margin: top 20px;
+	align-self: center;
+}
+
+
+@keyframes float {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+/* * ============================== */
+/* * ===== CONTENEDOR IMAGEN ====== */
+/* * ============================== */
+
+.contenedor-imagen {
+	z-index: -1;
+	height: 100vh;
+	background-size: cover;
+	background-attachment: fixed;
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.contenedor-imagen img {
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	object-fit: cover;
+	object-position: 0 bottom;
+}
+
+/* * ============================== */
+/* * ============ MAIN ============ */
+/* * ============================== */
+
+main {
+	min-height: 100vh;
+}
+
+main .contenido p {
+	/* From https://css.glass */
+
+	margin-bottom: 20px;
+	line-height: 30px;
+	color: #fff;
+}
+
+main .contenido .titulo {
+    font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	padding-top: 40px;
+	color: var(--morado);
+}
+
+main .contenido .fecha {
+	font-size: 14px;
+	color: #B5B5B5;
+}
+
+/* * ============================== */
+/* * ============ ASIDE =========== */
+/* * ============================== */
+
+aside {
+	min-width: 30%;
+	margin: 40px 20px 20px 0;
+	height: 100%;
+	background: var(--morado);
+	padding: 20px;
+	border-radius: 3px;;
+}
+
+aside .titulo {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #000;
+}
+
+aside .indice a {
+	display: block;
+	text-decoration: none;
+	margin-bottom: 10px;
+	color: #000;
+}
+aside .indice a:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+aside:before {
+	/* From https://css.glass */
+background: rgba(255, 255, 255, 0.27);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.4px);
+-webkit-backdrop-filter: blur(8.4px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+/* * ============================== */
+/* * ========== FOOTER ============ */
+/* * ============================== */
+
+footer {
+	background: #000;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+	align-items: center;
+	
+}
+
+footer .findepagina a{
+    margin: 0;
+    bottom: 0;
+	margin-right: 10px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+footer .findepagina .redesSociales{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	width: 150px;
+	height: 60px;
+}
+
+footer .findepagina .bi-twitter{
+    align-items: auto;
+    color: #1877f2;
+	animation-delay: 1s;
+	width: 150px;
+	height: 60px;
+}
+
+footer .findepagina .bi-github{
+	align-items: auto;
+    color: #fff;
+    animation-delay: 1s;
+	width: 150px;
+	height: 60px;
+}
+
+footer .findepagina .bi-instagram{
+	align-items: auto;
+    color: #e60073;
+    animation-delay: 1.5s;
+	width: 150px;
+	height: 60px
+}
+
+/* * ============================== */
+/* * ====== MEDIA QUERIES ========= */
+/* * ============================== */
+
+@media screen and (max-width: 900px){
+	.navbar .contenedor {
+		flex-wrap: wrap;
+		margin: 0;
+		width: 100%;
+	}
+
+	.navbar a {
+		width: auto;
+		flex: 1;
+	}
+
+	.contenedor-imagen {
+		height: 50vh;
+	}
+
+	main .contenedor {
+		flex-direction: column;
+	}
+}
